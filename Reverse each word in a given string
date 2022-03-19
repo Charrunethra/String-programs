@@ -1,0 +1,40 @@
+//SAMPLE INPUT : i.like.programming
+//O/p : i.ekil.gnimmargorp
+
+//Another problem : i/p : i.like.programming // logic: 1st reverse all the chars: gnimmargorp.ekil.i // 2nd perform stack implementation
+// o/p: programming.like.i// this also implemented in this code
+#include<bits/stdc++.h>
+using namespace std;
+
+void reverseWords(string s)
+{
+
+	stack<char> st;
+	for(int i=0;i<s.length();i++)
+	{
+		if(s[i]!='.')
+		   st.push(s[i]);
+		else{
+			while(st.empty() == false){
+				cout<<st.top();
+				st.pop();
+			}
+			cout<<".";
+		}
+	}
+	while(st.empty() == false){
+		cout<<st.top();
+		st.pop();
+	}
+}
+int main()
+{
+	string str;
+	cin>>str;
+	//TO REVERSE THE STRING AND STORING IN ANOTHER STRING SAY s1...below code line is for another problem
+	string s1= string(str.rbegin(),str.rend());
+	reverseWords(s1); // Already in code--reverseWords(str)...for another problem ---reverseWords(s1)
+	return 0;
+}
+//CHARRUNETHRA.C.R
+//20EUEC032

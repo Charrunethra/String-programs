@@ -1,0 +1,41 @@
+//SAMPLE I/P: i.like.programming
+//o/p: programming.like.i
+//lOGIC : 1st create small s string and if given string(capital s) has not '.' ,push into small s string...else,push into stack(st)
+// create resultant string(res) and pop out the top element and assign it to another string and add it to res & add a dot in it...
+///to eliminate the dot in the last use pop_back or resize
+#include<bits/stdc++.h>
+using namespace std;
+string reverseWords(string S)
+{
+	stack<string> st;
+	string s="";
+	for(int i=0;i<S.length();i++)
+	{
+	if(S[i]!='.')
+    {
+    	s+=S[i];
+	}
+	else
+	{
+		st.push(s);
+		s="";
+	}
+  } 
+  st.push(s);
+  string res="";
+  while(!st.empty())
+  {
+  	string str=st.top();
+  	st.pop();
+  	res+= str + ".";
+  }
+  res.resize(res.size()-1); // or res.pop_bacck();  so last element i.e.,'.' will be poped out
+  return res;
+}
+int main()
+{
+	string str;
+	cin>>str;
+	cout<<reverseWords(str);
+	return 0;
+}

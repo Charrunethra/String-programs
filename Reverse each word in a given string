@@ -3,6 +3,7 @@
 
 //Another problem : i/p : i.like.programming // logic: 1st reverse all the chars: gnimmargorp.ekil.i // 2nd perform stack implementation
 // o/p: programming.like.i// this also implemented in this code
+
 #include<bits/stdc++.h>
 using namespace std;
 

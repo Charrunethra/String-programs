@@ -1,0 +1,27 @@
+//SAMPLE INPUT : Tiger is an animal
+//o/p: 6 (i.e.,length of last word in the string is 6 ...so o/p is 6)
+//logic: if(str[i]>='a'&&<='z' || capital A and Z..) execute flag=true and increment count as count++...else(if flag==true..return count)
+//return count in the outside of the for loop too//so that if it is a single word ,the count will return
+#include<bits/stdc++.h>
+using namespace std;
+int length(string s)
+{
+	int count=0;//or next line // bool flag=false;
+	for(int i=s.length()-1;i>=0;i--)
+	{
+		if(s[i]!=' ')//or if(s[i]>='a'&&<='z')||(s[i]>='A'&&<='Z')//next line flag=true;
+		    count++;
+		else if(count)//or else
+		{             // if(flag==true)
+			return count;
+		}
+	}
+	return count;
+}
+int main()
+{
+	string str;
+	getline(cin,str);
+	cout<<length(str);
+	return 0;
+}

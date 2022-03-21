@@ -1,0 +1,25 @@
+//geeksforgeeks and forgeeksgeeks is an ANAGRAM
+//allergy and allergic is not an anagram...Anagram -- same characters only the order of characters are different
+#include<bits/stdc++.h>
+using namespace std;
+bool isAnagram(string a,string b)
+{
+	sort(a.begin(),a.end());
+	sort(b.begin(),b.end());
+	if(a==b)
+	   return true;
+	return false;
+	
+}
+int main()
+{
+	string a;
+	cin>>a;
+	string b;
+	cin>>b;
+	if(isAnagram(a,b))
+	    cout<<"YES";
+	else
+	   cout<<"NO";
+	return 0;
+}

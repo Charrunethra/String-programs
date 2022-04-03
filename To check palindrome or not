@@ -1,0 +1,13 @@
+//TO CHECK THE STRING IS PALINDROME OR NOT
+#include<bits/stdc++.h>
+using namespace std; //defines a scope// provides scope to the identifiers// declarative region// without this can't execute the program
+int main()
+{
+	string s;
+	cin>>s;
+	string c = string(s.rbegin(),s.rend());
+	if(s==c)
+		cout<<"Palindrome";
+	else
+	   cout<<"Not Palindrme";
+}

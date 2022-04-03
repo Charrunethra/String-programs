@@ -35,7 +35,7 @@ string reverseWords(string S)
 int main()
 {
 	string str;
-	cin>>str;
+	cin>>str; // getline(cin,str);
 	cout<<reverseWords(str);
 	return 0;
 }
